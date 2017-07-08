@@ -3,6 +3,8 @@ A modern platform for playing with languages, especially conlangs.
 # Langue /ˈlæŋ/
 ## The Langue Project [WIP]
 
+[![Join the chat at https://gitter.im/langue-project/Lobby](https://badges.gitter.im/langue-project/Lobby.svg)](https://gitter.im/langue-project/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Langue provides an infrastructure for creating and learning languages. The main aim is to be the most common platform for online and offline conlanging. It works on any of JavaScript engines so that the utilities and interfaces are isomorphic and universal across different platforms.
 
 Not only does Langue support phonetic distinctive channel, but also kinesic or more unusual, even conworldlike ways (something impossible for earthlings) to distinguish meanings of discourse, serialising it into specific data format.
