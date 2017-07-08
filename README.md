@@ -34,6 +34,7 @@ Langue consists of these parts:
   - Utterance Recognition
   - Utterance Synthesis
   - ? Ontology Database
+  - Conscripting Assinstance
 - API
   - A unified interface for querying informations about languages
 
