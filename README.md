@@ -17,10 +17,10 @@ Langue consists of these parts:
   - A unified schema for language description
 - Engines and Utilities
   - Dictionary
-    - Search on:
-      - lemma (proximity scoring with phonetic distance)
-      - translation (search with synonyms)
-      - description (full-text search)
+    - Search on these fields:
+      - Lemma (proximity scoring with utterance distance)
+      - Translation (search with synonyms)
+      - Description (full-text search)
   - Grammar and Spell Checking
   - Corpus and Discourse Database
   - Discourse Awkwardness Scoring
@@ -41,7 +41,7 @@ These features would be selectable for specific use.
 
 An "*utterance*" means a set of physical actions which comprises a discourse. An utterance consists of a series of distinctive channels. In some cases there might be more than one utterer in an utterance. A generalised term of "speech" or "pronunciation".
 
-A "*discourse*" means a set of utterances, things uttered and contexts of utterers. The number of utterances a discourse has depends on how they are clipped out from the discourse. Discourse also includes written text.
+A "*discourse*" means a set of utterances, things uttered and contexts of utterers. The number of utterances a discourse has depends on how they are clipped out from the discourse. Also includes written text.
 
 A "*context*" means a compound of utterer's own upbringing and all experiences until the utterance. In most cases each utterer has a more or less different context even in the same discourse, and his/her utterances are made always on the basis of that.
 
