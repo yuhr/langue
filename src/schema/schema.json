@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "Language",
+  "type": "object",
+  "required": ["name", "description"],
+  "properties": {
+    "name": {
+      "description": "Original full name of the language in the orthography. This could be shown in the conscript font. If any of following 'name*' fields are present, they will override this on their proper occasions. Otherwise, this name is used instead of them.",
+      "type": "string"
+    },
+    "nameShort": {
+      "description": "Short version of the original language name. This could be shown in the conscript font. Used when there's no enough space to show the full language name.",
+      "type": "string"
+    },
+    "nameTranscript": {
+      "description": "Transcribed name of the language. Used for beginner's readability. (FIXME: Support for various languages and writing systems.)",
+      "type": "string"
+    },
+    "nameAscii": {
+      "description": "Name of the language in ascii. Used where no unicode special characters support or no prefered conscript font is present.",
+      "type": "string"
+    },
+    "code": {
+      "description": "Identical code assigned to the language. If not present, 'x-<nameAscii>' is used.",
+      "type": "string"
+    },
+    "description": {
+      "description": "Short summary about the language. This should be a single line. (FIXME: Support for various languages and writing systems.)",
+      "type": "string"
+    }
+  }
+}
