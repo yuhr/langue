@@ -1,9 +1,7 @@
-A modern platform for playing with languages, especially conlangs.
+[![Join the chat at https://gitter.im/langue-project/Lobby](https://badges.gitter.im/langue-project/Lobby.svg)](https://gitter.im/langue-project/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 # Langue /ˈlæŋ/
 ## The Langue Project [WIP]
-
-[![Join the chat at https://gitter.im/langue-project/Lobby](https://badges.gitter.im/langue-project/Lobby.svg)](https://gitter.im/langue-project/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Langue provides an infrastructure for creating and learning languages. The main aim is to be the most common platform for online and offline conlanging. It works on any of JavaScript engines so that the utilities and interfaces are isomorphic and universal across different platforms.
 
@@ -48,7 +46,8 @@ These features would be selectable for specific use.
 - Language: TypeScript
 - Database: PouchDB
 - Query: GraphQL
-- Schema: JSON-Schema
+- Schema: JSON-Schema (typescript-json-schema)
+- Document: doca, (or typhen -> macrodown)
 
 ## General Terms
 
