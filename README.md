@@ -43,6 +43,13 @@ Langue consists of these parts:
 
 These features would be selectable for specific use.
 
+### Libraries and Frameworks
+
+- Language: TypeScript
+- Database: PouchDB
+- Query: GraphQL
+- Schema: JSON-Schema
+
 ## General Terms
 
 An "*utterance*" means a set of physical actions which comprises a discourse. An utterance consists of a series of distinctive channels. In some cases there might be more than one utterer in an utterance. A generalised term of "speech" or "pronunciation".
