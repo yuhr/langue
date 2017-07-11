@@ -23,6 +23,9 @@ Langue consists of these parts:
       - Lemma (proximity scoring with utterance distance)
       - Translation (search with synonyms)
       - Description (full-text search)
+    - Filter by:
+      - Tags (e.g. parts of speech)
+      - Timestamp (created, last modified)
   - Grammar and Spell Checking
   - Corpus and Discourse Database
   - Discourse Awkwardness Scoring
@@ -48,4 +51,4 @@ A "*discourse*" means a set of utterances, things uttered and contexts of uttere
 
 A "*context*" means a compound of utterer's own upbringing and all experiences until the utterance. In most cases each utterer has a more or less different context even in the same discourse, and his/her utterances are made always on the basis of that.
 
-A "*distinctive channel*" means a uniform manner to utter, such as phonetic sound, intonation, percussive sound and kinesic gesture. Every language has one or more distinctive channels, and a form of a lexical item of the language has one or more elementary layers correspond to each channel. Each channel may or may not be necessary to utter, and sometimes selectable according to the case of utterance or discourse.
+A "*distinctive channel*" means a uniform manner to utter, such as phonetic sound, intonation, percussive sound and kinesic gesture. Every language has one or more distinctive channels, and each form of lexical items of the language has one or more elementary layers correspond to each channel. Each channel may or may not be necessary to utter, and sometimes selectable according to the case of utterance or discourse.
