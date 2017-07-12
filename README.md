@@ -9,6 +9,8 @@ Not only does Langue support phonetic distinctive channel, but also kinesic or m
 
 Currently in the planning stage. The project name "Langue" might be subject to change.
 
+The official web service will be coming to [langue.link](https://langue.link/) and its [repository](https://github.com/yuhr/langue.link).
+
 ## Plan
 
 Langue consists of these parts:
