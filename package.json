@@ -1,0 +1,54 @@
+{
+  "private": true,
+  "name": "langue",
+  "version": "0.1.0",
+  "description": "A modern platform for playing with languages.",
+  "main": "dst/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuhr/langue.git"
+  },
+  "keywords": [
+    "langue",
+    "conlang",
+    "language"
+  ],
+  "author": "yuhr <mail@yuhr.org>",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/yuhr/langue/issues"
+  },
+  "homepage": "https://github.com/yuhr/langue#readme",
+  "dependencies": {
+    "ajv": "^5.2.2",
+    "graphql": "^0.10.3",
+    "pouchdb": "^6.2.0"
+  },
+  "devDependencies": {
+    "@types/graphql": "^0.9.3",
+    "@types/node": "^8.0.10",
+    "@types/pouchdb": "^6.1.1",
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
+    "before-build-webpack": "^0.1.0",
+    "doca": "^0.3.0",
+    "gql-loader": "^1.0.0",
+    "json-schema-loader": "^1.0.0",
+    "ts-loader": "^2.2.2",
+    "typescript": "^2.4.1",
+    "typescript-json-schema": "^0.16.0",
+    "typhen": "^1.2.8",
+    "typhen-json-schema": "^0.5.0",
+    "webpack": "^3.0.0",
+    "webpack-node-externals": "^1.6.0"
+  },
+  "scripts": {
+    "start": "webpack -w",
+    "build:debug": "webpack",
+    "build:release": "webpack -p --optimize-minimize",
+    "test": "node test",
+    "build-and-test": "yarn build:debug && yarn test"
+  }
+}

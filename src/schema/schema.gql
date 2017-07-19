@@ -1,0 +1,23 @@
+# GraphQL Schema for Langue
+#   Note:
+#     - The response against queries should be out-of-the-box data. Do not return unexpected or unuseful values (e.g. null) for the queried fields to avoid requerying as well as possible. Such exception handling should be done inside the responding server.
+
+type Query {
+  language(
+    name: String,
+    nameShort: String,
+    nameTranscript: String,
+    nameAscii: String,
+    code: String,
+    description: String
+  ): [Language]!
+}
+
+type Language {
+  name: String!
+  nameShort: String!
+  nameTranscript: String!
+  nameAscii: String!
+  code: String!
+  description: String!
+}

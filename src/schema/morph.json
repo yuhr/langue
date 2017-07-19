@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Morph",
+  "description": "Describes a chunk of morphemes.",
+  "type": "object",
+  "properties": {
+    "transcription": {
+      "description": "Transcription in the specific rule.",
+      "type": "string"
+    },
+    "graph": {
+      "description": "Form described in graphemes.",
+      "type": "string"
+    },
+    "phone": {
+      "description": "Pronunciation described in phonemes.",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "transcription"
+  ]
+}

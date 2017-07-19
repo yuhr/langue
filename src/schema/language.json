@@ -1,8 +1,8 @@
 {
-  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Language",
+  "description": "Describes a language registory.",
   "type": "object",
-  "required": ["name", "description"],
   "properties": {
     "name": {
       "description": "Original full name of the language in the orthography. This could be shown in the conscript font. If any of following 'name*' fields are present, they will override this on their proper occasions. Otherwise, this name is used instead of them.",
@@ -27,6 +27,20 @@
     "description": {
       "description": "Short summary about the language. This should be a single line. (FIXME: Support for various languages and writing systems.)",
       "type": "string"
+    },
+    "lexicons": {
+      "description": "Set of all variations (e.g. translation and description language) of lexicon.",
+      "type": "array",
+      "items": [
+        {
+          "$ref": "../schema/lexicon.json"
+        }
+      ]
     }
-  }
+  },
+  "additionalProperties": false,
+  "required": [
+    "name",
+    "description"
+  ]
 }

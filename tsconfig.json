@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "declaration": true,
+    "sourceMap": true,
+
+    "strict": true,
+
+    //"noUnusedLocals": true,
+    //"noUnusedParameters": true,
+    "noImplicitReturns": true,
+
+    "moduleResolution": "node",
+
+    "sourceRoot": "./src/",
+
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
