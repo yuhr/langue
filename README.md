@@ -1,7 +1,7 @@
 <div align="center">
   <br><br>
   <img src="https://cdn.rawgit.com/yuhr/langue/master/res/logo-langue.svg"
-       width="512px">
+       width="506px">
   <p>A modern platform for conlanging.</p>
   <h1>The Langue Project</h1>
   <a href="https://www.npmjs.com/package/langue">
@@ -9,6 +9,9 @@
   </a>
   <a href="https://gitter.im/langue-project/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge">
     <img src="https://badges.gitter.im/langue-project/Lobby.svg">
+  </a>
+  <a href="https://www.patreon.com/yuhr">
+    <img src="https://img.shields.io/badge/donate-patreon-yellow.svg">
   </a>
   <br><br><br><br>
 </div>
