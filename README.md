@@ -1,7 +1,7 @@
 <div align="center">
   <br><br>
   <img src="https://cdn.rawgit.com/yuhr/langue/master/res/logo-langue.svg"
-       width="506px">
+       width="400px">
   <p>A modern platform for conlanging.</p>
   <h1>The Langue Project</h1>
   <a href="https://www.npmjs.com/package/langue">
