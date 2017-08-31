@@ -1,9 +1,9 @@
 {
-  "private": true,
   "name": "langue",
-  "version": "0.1.0",
-  "description": "A modern platform for playing with languages.",
+  "version": "0.0.0",
+  "description": "A modern platform for conlanging.",
   "main": "dst/index.js",
+  "files": [],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yuhr/langue.git"

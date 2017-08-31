@@ -4,6 +4,9 @@
        width="512px">
   <p>A modern platform for conlanging.</p>
   <h1>The Langue Project</h1>
+  <a href="https://www.npmjs.com/package/langue">
+    <img src="https://img.shields.io/npm/v/langue.svg">
+  </a>
   <a href="https://gitter.im/langue-project/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge">
     <img src="https://badges.gitter.im/langue-project/Lobby.svg">
   </a>
@@ -16,7 +19,7 @@ Not only does Langue support phonetic distinctive channel, but also kinesic or m
 
 **Currently in the planning stage.**
 
-Langue framework (a set of packages) will be available on npm. The official web service which uses it will be coming to [langue.link](https://langue.link) and its [repository](https://github.com/yuhr/langue.link).
+Langue framework (a set of packages) will be available on npm (you can `npm install langue` now but it's blank). The official web service which uses it will be coming to [langue.link](https://langue.link) and its [repository](https://github.com/yuhr/langue.link).
 
 ## Design Philosophy
 
