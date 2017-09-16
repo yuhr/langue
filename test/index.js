@@ -1,3 +1,3 @@
 const langue = require('../dst').default;
 
-langue();
+langue()('query { language(name: "test") { name } }');

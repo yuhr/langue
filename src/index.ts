@@ -1,6 +1,5 @@
 import * as fs from 'fs';
 const Ajv = require('ajv');
-import * as PouchDB from 'pouchdb';
 import { graphql, buildSchema } from 'graphql';
 
 import { Language } from './schema/schema';
@@ -28,12 +27,11 @@ export default (path:string = './langue.json') => {
       return [data];
     },
   };
-  graphql(schema, 'query { language(name: "test") { name } }', root)
+
+  return (query:string) => {
+    graphql(schema, query, root)
     .then(response => {
       console.log(JSON.stringify(response, null, 2));
     });
-
-  return {
-
   };
 }

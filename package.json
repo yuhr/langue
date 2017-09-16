@@ -11,7 +11,14 @@
   "keywords": [
     "langue",
     "conlang",
-    "language"
+    "language",
+    "dictionary",
+    "ontology",
+    "translation",
+    "speech-recognition",
+    "speech-synthesis",
+    "conworld",
+    "conscript"
   ],
   "author": "yuhr <mail@yuhr.org>",
   "license": "CC0-1.0",
@@ -24,9 +31,10 @@
     "graphql": "^0.10.3"
   },
   "devDependencies": {
+    "cross-env": "^5.0.5",
+    "npm-run-all": "^4.1.1",
     "@types/graphql": "^0.9.3",
     "@types/node": "^8.0.10",
-    "babel-cli": "^6.24.1",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
     "babel-preset-env": "^1.6.0",
@@ -43,10 +51,10 @@
     "webpack-node-externals": "^1.6.0"
   },
   "scripts": {
-    "start": "webpack -w",
+    "build:release": "cross-env NODE_ENV=production webpack",
     "build:debug": "webpack",
-    "build:release": "webpack -p --optimize-minimize",
     "test": "node test",
-    "build-and-test": "yarn build:debug && yarn test"
+    "watch:webpack": "webpack --watch",
+    "watch": "run-p watch:*"
   }
 }
