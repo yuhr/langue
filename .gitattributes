@@ -1,2 +1,3 @@
 * linguist-documentation
 src/* linguist-documentation=false
+src/schema/*.json linguist-generated

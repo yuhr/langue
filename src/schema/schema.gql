@@ -1,23 +1,16 @@
-# GraphQL Schema for Langue
-#   Note:
-#     - The response against queries should be out-of-the-box data, in order to avoid re-querying as well as possible. Every exception handling should be done inside the responding server.
-
-type Query {
-  language(
-    name: String,
-    nameShort: String,
-    nameTranscript: String,
-    nameAscii: String,
-    code: String,
-    description: String
-  ): [Language]!
+schema {
+  query: Query
+  mutation: Mutation
 }
 
-type Language {
-  name: String!
-  nameShort: String!
-  nameTranscript: String!
-  nameAscii: String!
-  code: String!
-  description: String!
+type Query {
+  node(feature: Feature): String
+}
+
+type Mutation {
+  node: String
+}
+
+input Feature {
+  language: String
 }

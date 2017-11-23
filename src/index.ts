@@ -1,37 +1,41 @@
-import * as fs from 'fs';
-const Ajv = require('ajv');
+import fs from 'fs';
+
+import Gun from 'gun';
+import 'gun/lib/path';
+import chain from 'chain-gun';
+chain(Gun);
+
+import nanoid from 'nanoid'; // /^[A-Za-z0-9_~]{21}$/
+
 import { graphql, buildSchema } from 'graphql';
+import gql from './schema/schema.gql';
 
-import { Language } from './schema/schema';
-import schema_gql from './schema/schema.gql';
-import schema_json from './schema/language.json';
+if (fs.existsSync('./test/data.json')) fs.unlinkSync('./test/data.json');
 
-class ValidationError extends Error {
-  constructor(errors: any) {
-    super(JSON.stringify(errors, null, 2));
-    this.name = 'ValidationError';
-    Object.setPrototypeOf(this, ValidationError.prototype);
-  }
-}
+export default module.exports = (options?:object) => {
+  const graph = Gun({ file: './test/data.json', uuid: nanoid });
+  const id = (node:any) => {
+    return node._.soul
+        || (node._.put ? node._.put['#']
+                      || (node._.put['_'] ? node._.put['_']['#']
+                                          : node._.get)
+                       : node._.get);
+  };
 
-export default (path:string = './langue.json') => {
-  const ajv = Ajv({ allErrors: true });
-  ajv.addMetaSchema(require('ajv/lib/refs/json-schema-draft-04.json'));
-  const validate = ajv.compile(schema_json);
-  const data: Language = JSON.parse(fs.readFileSync(path, 'utf8'));
-  if (!validate(data)) throw new ValidationError(validate.errors);
-
-  const schema = buildSchema(schema_gql);
+  /*
+  const schema = buildSchema(gql);
   const root = {
-    language: (args: { name:string }) => {
-      return [data];
-    },
+    node: () => {
+      return 'Hello world!';
+    }
   };
+  graphql(schema, '{ node }', root).then((response) => {
+    console.log(response);
+  });*/
 
-  return (query:string) => {
-    graphql(schema, query, root)
-    .then(response => {
-      console.log(JSON.stringify(response, null, 2));
-    });
+  return {
+    query: (query:string) => {
+      console.log(query);
+    }
   };
-}
+};

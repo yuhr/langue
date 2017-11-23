@@ -6,7 +6,7 @@ module.exports = {
     index: "./index.ts"
   },
   output: {
-    library: 'langue',
+    library: 'Langue',
     libraryTarget: 'umd',
     path: __dirname + '/dst',
     filename: './[name].js'
@@ -28,17 +28,5 @@ module.exports = {
   watchOptions: {
     ignored: /dst/
   },
-  plugins: [
-    new (require('before-build-webpack'))((compiler, callback) => {
-      const typhen = require('typhen');
-      typhen.run({
-        plugin: typhen.loadPlugin('typhen-json-schema', {
-          baseUri: '..'
-        }),
-        src: './src/schema/schema.ts',
-        dest: './src'
-      }).catch(e => { console.error(e); });
-      callback();
-    })
-  ]
+  plugins: []
 };

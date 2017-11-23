@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://langue.link/data/schema.json#",
+  "definitions": {
+    "formula": {
+      "id": "#formula",
+      "type": "array",
+      "items": {
+        "$ref": "#feature"
+      }
+    },
+    "feature": {
+      "id": "#feature",
+      "type": "object",
+      "properties": {
+        "key": {
+          "$ref": "#formula"
+        },
+        "value": {
+          "$ref": "#formula"
+        }
+      },
+      "required": ["key", "value"]
+    }
+  },
+  "type": "object",
+  "properties": {
+    "formulae": {
+      "type": "array",
+      "items": {
+        "$ref": "#formula"
+      }
+    }
+  },
+  "required": ["formulae"]
+}
