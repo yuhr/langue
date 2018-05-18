@@ -1,41 +1,43 @@
-import fs from 'fs';
+import fs from 'fs'
+import { buildSchema, graphql } from 'graphql'
+import { Static, match } from 'runtypes'
 
-import Gun from 'gun';
-import 'gun/lib/path';
-import chain from 'chain-gun';
-chain(Gun);
+import { DefaultAdapter, Adapter } from './adapter'
+import { CallablePromise } from './promise'
 
-import nanoid from 'nanoid'; // /^[A-Za-z0-9_~]{21}$/
+const schema = {
+  gql: fs.readFileSync(`${__dirname}/../assets/schema/schema.gql`, 'utf8'),
+  json: fs.readFileSync(`${__dirname}/../assets/schema/schema.json`, 'utf8')
+}
 
-import { graphql, buildSchema } from 'graphql';
-import gql from './schema/schema.gql';
+export type LinkOptions = {
+  key: string
+}
 
-if (fs.existsSync('./test/data.json')) fs.unlinkSync('./test/data.json');
-
-export default module.exports = (options?:object) => {
-  const graph = Gun({ file: './test/data.json', uuid: nanoid });
-  const id = (node:any) => {
-    return node._.soul
-        || (node._.put ? node._.put['#']
-                      || (node._.put['_'] ? node._.put['_']['#']
-                                          : node._.get)
-                       : node._.get);
-  };
-
-  /*
-  const schema = buildSchema(gql);
-  const root = {
-    node: () => {
-      return 'Hello world!';
+class Langue {
+  private static graph: Adapter
+  private static readonly schema = buildSchema(schema.gql)
+  private static readonly root = {
+    root: () => {
+      return 'A'
     }
-  };
-  graphql(schema, '{ node }', root).then((response) => {
-    console.log(response);
-  });*/
+  }
+  private constructor() {}
+  static async query(query: string) {
+    const res = await graphql(this.schema, query, this.root)
+    if (res.errors) throw res.errors
+    if (res.data) return res.data
+    else throw Error('No result data.')
+  }
+  static get link() {
+    return new CallablePromise<void, LinkOptions | undefined>((args, resolve, reject) => {
+      console.log('link options:', args[0])
+      DefaultAdapter.connect().then(() => {
+        Langue.graph = new DefaultAdapter('langue')
+        resolve()
+      }).catch(reject)
+    })
+  }
+}
 
-  return {
-    query: (query:string) => {
-      console.log(query);
-    }
-  };
-};
+export default Langue
